@@ -6,7 +6,7 @@ A tutorial C# application to describe various engines
 * .NET  8.0
 * Visual Studio 2022
 
-## Instal
+## Install
 
 ```bash
 git clone https://github.com/AnvilM/CS_Engines
