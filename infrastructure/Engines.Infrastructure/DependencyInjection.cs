@@ -12,6 +12,12 @@ namespace Engines.Infrastructure
         {
             services.AddScoped<IDiselRepository, DiselRepository>();
             services.AddScoped<IDiselService, DiselService>();
+
+            services.AddScoped<IJetRepository, JetRepository>();
+            services.AddScoped<IJetService, JetService>();
+
+            services.AddScoped<IICERepository, ICERepository>();
+            services.AddScoped<IICEService, ICEService>();
         
             return services;
 

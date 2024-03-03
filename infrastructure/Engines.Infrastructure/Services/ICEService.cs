@@ -1,51 +1,52 @@
-using Engines.Domain.Entities;
+﻿using Engines.Domain.Entities;
 using Engines.Application.Common.Interfaces.Repositories;
 using Engines.Application.Common.Interfaces.Services;
 
 namespace Engines.Infrastructure.Services
 {
-    public class DiselService : IDiselService
+    public class ICEService : IICEService
     {
-        private readonly IDiselRepository _diselRepository;
+        private readonly IICERepository _iceRepository;
 
-        public DiselService(IDiselRepository diselRepository){
-            _diselRepository = diselRepository;
+        public ICEService(IICERepository iceRepository){
+            _iceRepository = iceRepository;
         }
 
 
-        public Disel Add(Disel disel){
-            if(disel.Volume < 0){
+        public ICE Add(ICE ice){
+            if (ice.Volume < 0)
+            {
                 throw new Exception("Объём не может иметь отрицательное значение");
             }
 
-            if(disel.Fuel < 0) 
+            if (ice.Fuel < 0)
             {
                 throw new Exception("Топливо не может иметь отрицательное значение");
             }
 
-            if (disel.Power < 0)
+            if (ice.Power < 0)
             {
                 throw new Exception("Мощность не может иметь отрицательное значение");
             }
 
-            if (disel.RPM < 0)
+            if (ice.RPM < 0)
             {
                 throw new Exception("Обороты в минуту не может иметь отрицательное значение");
             }
 
-            return _diselRepository.Add(disel);
+            return _iceRepository.Add(ice);
         }
 
-        public Disel? GetById(Guid Id){
-            return _diselRepository.GetById(Id);
+        public ICE? GetById(Guid Id){
+            return _iceRepository.GetById(Id);
         }
 
-        public void Remove(Disel disel){
-            _diselRepository.Remove(disel);
+        public void Remove(ICE ice){
+            _iceRepository.Remove(ice);
         }
 
-        public Disel Update(Disel disel){
-            return _diselRepository.Update(disel);
+        public ICE Update(ICE ice){
+            return _iceRepository.Update(ice);
         }
     }
 }
