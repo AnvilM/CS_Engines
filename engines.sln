@@ -19,6 +19,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engines.Domain", "core\Engi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engines.Infrastructure", "infrastructure\Engines.Infrastructure\Engines.Infrastructure.csproj", "{FC5361CE-3A74-4254-939F-F77BFA240487}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{C4698012-73BD-421F-AAA1-891BDEFDFDF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engines.Presentation.MAUIClient", "Engines.Presentation.MAUIClient\Engines.Presentation.MAUIClient.csproj", "{07E3C7C9-9A16-4934-B268-77D215051F42}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DE833C3-6A66-4DDF-8D56-16FFBACE8BCC} = {0DE833C3-6A66-4DDF-8D56-16FFBACE8BCC}
+		{FC5361CE-3A74-4254-939F-F77BFA240487} = {FC5361CE-3A74-4254-939F-F77BFA240487}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +49,12 @@ Global
 		{FC5361CE-3A74-4254-939F-F77BFA240487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC5361CE-3A74-4254-939F-F77BFA240487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC5361CE-3A74-4254-939F-F77BFA240487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E3C7C9-9A16-4934-B268-77D215051F42}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +65,8 @@ Global
 		{0DE833C3-6A66-4DDF-8D56-16FFBACE8BCC} = {C5A48872-27F0-447C-85EC-291F24AD15CC}
 		{DADA99EE-72C7-4E90-A3CB-3E121EAE242A} = {C5A48872-27F0-447C-85EC-291F24AD15CC}
 		{FC5361CE-3A74-4254-939F-F77BFA240487} = {61303A4B-EBAD-4DBC-85CC-1227D64FD618}
+		{C4698012-73BD-421F-AAA1-891BDEFDFDF8} = {526CD874-24F9-4D5E-AF59-CFEF2E9AE15D}
+		{07E3C7C9-9A16-4934-B268-77D215051F42} = {C4698012-73BD-421F-AAA1-891BDEFDFDF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68536A52-7DFC-4AF9-83FD-7F0F6CC7A610}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Engines.Presentation.MAUIClient.ViewModels.Engines"
+             xmlns:domainModels="clr-namespace:Engines.Domain.Entities;assembly=Engines.Domain"
+             x:Class="Engines.Presentation.MAUIClient.Pages.Engines.EnginePage"
+             x:DataType="viewModels:EnginePageViewModel"
+             Title="Двигатели">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand">
+        <Button 
+       Text="Дизельный двигатель" 
+       SemanticProperties.Hint="Дизельный двигатель"
+       Command="{Binding GoToDiselEnginePageCommand}" 
+       HorizontalOptions="Fill" 
+       Margin="20"/>
+
+        <Button 
+        Text="Двигатель внутреннего сгорания" 
+        SemanticProperties.Hint="Двигатель внутреннего сгорания"
+        Command="{Binding GoToICEEnginePageCommand}" 
+        HorizontalOptions="Fill" 
+        Margin="20"/>
+
+        <Button 
+        Text="Реактивынй дивгатель" 
+        SemanticProperties.Hint="Реактивынй дивгатель"
+        Command="{Binding GoToJetEnginePageCommand}" 
+        HorizontalOptions="Fill" 
+        Margin="20"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
