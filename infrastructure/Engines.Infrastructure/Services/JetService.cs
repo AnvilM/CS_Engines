@@ -2,6 +2,7 @@ using Engines.Domain.Entities;
 using Engines.Application.Common.Interfaces.Repositories;
 using Engines.Application.Common.Interfaces.Services;
 using System.Collections.Generic;
+using Engines.Infrastructure.Persistence.Repositories;
 
 namespace Engines.Infrastructure.Services
 {
@@ -49,6 +50,11 @@ namespace Engines.Infrastructure.Services
 
         public Jet Update(Jet jet){
             return _jetRepository.Update(jet);
+        }
+
+        public List<Jet> GetList(string Name)
+        {
+            return _jetRepository.GetList(Name);
         }
     }
 }

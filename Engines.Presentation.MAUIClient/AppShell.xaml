@@ -5,7 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:routes="clr-namespace:Engines.Presentation.MAUIClient.Pages.Common" 
     xmlns:pages="clr-namespace:Engines.Presentation.MAUIClient.Pages" 
-    xmlns:pagesEngine="clr-namespace:Engines.Presentation.MAUIClient.Pages.Engines"
+    xmlns:pagesDiselEngine="clr-namespace:Engines.Presentation.MAUIClient.Pages.Engines.Disel"
+    xmlns:pagesICEEngine="clr-namespace:Engines.Presentation.MAUIClient.Pages.Engines.ICE"
+    xmlns:pagesJetEngine="clr-namespace:Engines.Presentation.MAUIClient.Pages.Engines.Jet"
     Title="Engines.Presentation.MAUIClient">
 
     <FlyoutItem Title="Главная страница" >
@@ -16,12 +18,35 @@
        Route="{Static routes:Routes.MainRoute}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Прямоугольники" >
+
+
+    <FlyoutItem Title="Дизельный двигатель" >
         <Tab>
             <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate pagesEngine:EnginePage}"
-    Route="{Static routes:Routes.EngineRoute}" />
+                Title="Дизельный двигатель"
+                ContentTemplate="{DataTemplate pagesDiselEngine:DiselEnginePage}"
+                Route="{Static routes:Routes.DiselEnginePageRoute}" />
+        </Tab>
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Двигатель внутреннего сгорания" >
+        <Tab>
+            <ShellContent
+            Title="Двигатель внутреннего сгорания"
+            ContentTemplate="{DataTemplate pagesICEEngine:ICEEnginePage}"
+            Route="{Static routes:Routes.ICEEnginePageRoute}" />
+        </Tab>
+    </FlyoutItem>
+
+
+
+    <FlyoutItem Title="Реактивный двигатель" >
+        <Tab>
+            <ShellContent
+            Title="Реактивный двигатель"
+            ContentTemplate="{DataTemplate pagesJetEngine:JetEnginePage}"
+            Route="{Static routes:Routes.JetEnginePageRoute}" />
         </Tab>
     </FlyoutItem>
 

@@ -47,5 +47,10 @@ namespace Engines.Infrastructure.Services
         public Disel Update(Disel disel){
             return _diselRepository.Update(disel);
         }
+
+        public List<Disel> GetList(string Name) 
+        {
+            return _diselRepository.GetList(Name);
+        }
     }
 }

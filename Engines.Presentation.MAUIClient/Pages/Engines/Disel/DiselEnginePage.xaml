@@ -2,11 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Engines.Presentation.MAUIClient.Pages.Engines.Disel.DiselEnginePage"
+             xmlns:viewModels="clr-namespace:Engines.Presentation.MAUIClient.ViewModels.Engines"
+             x:DataType="viewModels:Disel.DiselEngineViewModel"
              Title="DiselEnginePage">
     <VerticalStackLayout>
-        <Label 
-            Text="Aboba"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Button 
+            Text="Добавить дизельный двигатель" 
+            SemanticProperties.Hint="Добавить дизельный двигатель"
+            Command="{Binding GoToAddDiselEnginePageCommand}" 
+            HorizontalOptions="Fill" 
+            Margin="20"/>
+
+        <Button 
+            Text="Получить дизельный двигатель" 
+            SemanticProperties.Hint="Получить дизельный двигатель"
+            Command="{Binding GoToGetDiselEnginePageCommand}" 
+            HorizontalOptions="Fill" 
+            Margin="20"/>
     </VerticalStackLayout>
 </ContentPage>

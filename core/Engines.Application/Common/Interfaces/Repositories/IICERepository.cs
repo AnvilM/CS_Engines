@@ -11,5 +11,7 @@ namespace Engines.Application.Common.Interfaces.Repositories
         void Remove(ICE ice);
 
         ICE? GetById(Guid Id);
+
+        List<ICE> GetList(string Name);
     }
 }

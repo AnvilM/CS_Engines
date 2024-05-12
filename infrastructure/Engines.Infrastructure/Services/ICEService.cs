@@ -1,6 +1,7 @@
 ﻿using Engines.Domain.Entities;
 using Engines.Application.Common.Interfaces.Repositories;
 using Engines.Application.Common.Interfaces.Services;
+using Engines.Infrastructure.Persistence.Repositories;
 
 namespace Engines.Infrastructure.Services
 {
@@ -47,6 +48,11 @@ namespace Engines.Infrastructure.Services
 
         public ICE Update(ICE ice){
             return _iceRepository.Update(ice);
+        }
+
+        public List<ICE> GetList(string Name)
+        {
+            return _iceRepository.GetList(Name);
         }
     }
 }

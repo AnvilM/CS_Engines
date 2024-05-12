@@ -11,5 +11,7 @@ namespace Engines.Application.Common.Interfaces.Repositories
         void Remove(Disel disel);
 
         Disel? GetById(Guid Id);
+
+        List<Disel> GetList(string Name);
     }
 }

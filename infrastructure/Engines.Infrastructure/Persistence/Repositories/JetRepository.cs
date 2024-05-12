@@ -29,5 +29,12 @@ namespace Engines.Infrastructure.Persistence.Repositories
             }
             return jet;
         }
+
+        public List<Jet> GetList(string Name)
+        {
+            return _JetList.
+                Where(engine => engine.
+            Name.ToLower().StartsWith((Name ?? "").ToLower())).ToList();
+        }
     }
 }

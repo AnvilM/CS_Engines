@@ -1,9 +1,14 @@
+using Engines.Presentation.MAUIClient.ViewModels.Engines.ICE;
+
 namespace Engines.Presentation.MAUIClient.Pages.Engines.ICE;
 
 public partial class AddICEEnginePage : ContentPage
 {
-	public AddICEEnginePage()
-	{
-		InitializeComponent();
-	}
+    private readonly AddICEEngineViewModel _addICEEngineViewModel;
+    public AddICEEnginePage(AddICEEngineViewModel addICEEngineViewModel)
+    {
+        InitializeComponent();
+
+        BindingContext = _addICEEngineViewModel = addICEEngineViewModel;
+    }
 }

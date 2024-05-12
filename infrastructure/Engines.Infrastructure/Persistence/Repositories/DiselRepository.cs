@@ -1,5 +1,6 @@
 using Engines.Application.Common.Interfaces.Repositories;
 using Engines.Domain.Entities;
+using System.Xml.Linq;
 
 namespace Engines.Infrastructure.Persistence.Repositories
 {
@@ -26,6 +27,13 @@ namespace Engines.Infrastructure.Persistence.Repositories
                 return _diselList[index] = disel;
             }
             return disel;
+        }
+
+        public List<Disel> GetList(string Name)
+        {
+            return _diselList.
+                Where(engine => engine.
+            Name.ToLower().StartsWith((Name ?? "").ToLower())).ToList();
         }
     }
 }

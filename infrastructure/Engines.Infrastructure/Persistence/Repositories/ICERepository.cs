@@ -27,5 +27,12 @@ namespace Engines.Infrastructure.Persistence.Repositories
             }
             return ice;
         }
+
+        public List<ICE> GetList(string Name)
+        {
+            return _iceList.
+                Where(engine => engine.
+            Name.ToLower().StartsWith((Name ?? "").ToLower())).ToList();
+        }
     }
 }

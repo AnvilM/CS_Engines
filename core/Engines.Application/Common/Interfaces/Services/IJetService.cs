@@ -11,5 +11,7 @@ namespace Engines.Application.Common.Interfaces.Services
         void Remove(Jet jet);
 
         Jet? GetById(Guid Id);
+
+        List<Jet> GetList(string Name);
     }
 }
